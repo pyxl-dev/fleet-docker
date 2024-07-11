@@ -6,3 +6,5 @@ fleet/*
 
 mysql/*
 !mysql/default.env
+
+.env
