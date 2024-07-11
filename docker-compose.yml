@@ -43,9 +43,7 @@ services:
   fleet:
     image: fleetdm/fleet:latest
     volumes:
-      - type: bind
-        source: ./fleet
-        target: /fleet
+      - fleet:/fleet
     environment: *fleet_environment
     networks:
       - reverse-proxy
@@ -59,6 +57,7 @@ services:
 volumes:
   mysql:
   redis:
+  fleet:
 
 networks:
   internal:
